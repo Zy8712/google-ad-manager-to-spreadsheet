@@ -20,6 +20,9 @@
 ### **Overview**
 This method fetches Google Ads data using the **Google Ads API** and stores it in a Google Sheet.
 
+> [!WARNING]
+> This is a far more technical approach that, while it has its own benefits is overcomplicated for simple automation of data copying. RECOMMENDED USE of METHOD #2 for Google Ads built-in tools/scripts.
+
 ### **Requirements**
 - A **Google Ads Developer Token**
 - A **Google Cloud Project** with API access
