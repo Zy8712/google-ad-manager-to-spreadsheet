@@ -3,7 +3,7 @@
 <div align="center">
     <img src="./readme-assets/ads-to-sheets.png" width="800px" />
     <h1>Google Ads Data Scraper & Automation</h1>
-    <img src="https://skillicons.dev/icons?i=python,js,nodejs,github,vscode&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=python,js,nodejs,github,vscode,gcp&theme=dark" />
 </div>
 
 > [!IMPORTANT]
@@ -68,7 +68,7 @@ This method runs a Google Ads Script inside Google Ads Manager to fetch data and
 - Click **Create Schedule** in Google Ads Scripts.
 - Set it to run **once per day**.
 
-<p align="right"><a href="#readme-top">back to top</a></p>
+<p align="right"><a href="#top">back to top</a></p>
 
 ## **Comparison Table**
 | Feature | Google Ads API (Python) | Google Ads Scripts (JavaScript) |
@@ -80,7 +80,7 @@ This method runs a Google Ads Script inside Google Ads Manager to fetch data and
 | Runs Inside Google Ads | ❌ No	| ✅ Yes
 | Best For | Developers who need advanced reports | Marketers who want quick automation
 
-<p align="right"><a href="#readme-top">back to top</a></p>
+<p align="right"><a href="#top">back to top</a></p>
 
 ## **Contributing**
 Feel free to submit pull requests or report issues if you find any improvements.
@@ -88,4 +88,7 @@ Feel free to submit pull requests or report issues if you find any improvements.
 ## **License**
 This project is licensed under the MIT License.
 
-<p align="right"><a href="#readme-top">back to top</a></p>
+## **Attribution**
+Google Ad + Google Sheet Header Image from Unito. Link to article: <a href="https://unito.io/blog/guide-how-to-sync-google-ads-spreadsheet/">here</a>.
+
+<p align="right"><a href="#top">back to top</a></p>
