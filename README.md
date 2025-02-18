@@ -43,34 +43,8 @@ client_secret: "YOUR_CLIENT_SECRET"
 refresh_token: "YOUR_REFRESH_TOKEN"
 ```
 3. Run the Script
-```
-from google.ads.google_ads.client import GoogleAdsClient
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+<img src="./readme-assets/method1-full.png" alt="method1-full" />
 
-# Load Google Ads client
-client = GoogleAdsClient.load_from_storage("google-ads.yaml")
-customer_id = "123-456-7890"
-
-# Query Google Ads data
-query = """
-SELECT campaign.id, campaign.name, metrics.impressions, metrics.clicks, metrics.cost_micros
-FROM campaign
-WHERE segments.date DURING LAST_7_DAYS
-"""
-response = client.service.google_ads.search(customer_id=customer_id, query=query)
-
-# Google Sheets Setup
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
-gs_client = gspread.authorize(creds)
-sheet = gs_client.open("Google Ads Data").sheet1
-
-# Append data to Google Sheets
-for row in response:
-    sheet.append_row([row.campaign.id.value, row.campaign.name.value, row.metrics.impressions.value, row.metrics.clicks.value, row.metrics.cost_micros.value])
-print("Data updated in Google Sheets.")
-```
 4. Automate Daily Execution
 - Use **Google Cloud Scheduler**, **cron job**, or **Task Scheduler** to run the script daily.
 
@@ -85,23 +59,8 @@ This method runs a Google Ads Script inside Google Ads Manager to fetch data and
 - Navigate to Tools & Settings > Scripts.
 - Click + New Script.
 2. Copy & Paste the Script
-```
-function main() {
-    var spreadsheetUrl = "YOUR_GOOGLE_SHEET_URL";
-    var sheet = SpreadsheetApp.openByUrl(spreadsheetUrl).getActiveSheet();
-    
-    var report = AdsApp.report(
-        "SELECT CampaignName, Clicks, Impressions, Cost " +
-        "FROM CAMPAIGN_PERFORMANCE_REPORT " +
-        "DURING LAST_7_DAYS");
+<img src="./readme-assets/method2-script.png" alt="method2-script" />
 
-    var rows = report.rows();
-    while (rows.hasNext()) {
-        var row = rows.next();
-        sheet.appendRow([row.CampaignName, row.Clicks, row.Impressions, row.Cost]);
-    }
-}
-```
 3. Save & Authorize the Script
 - Click **Authorize** when prompted.
 - Run the script to test data retrieval.
