@@ -1,6 +1,8 @@
 function main() {
     var spreadsheetUrl = "YOUR_GOOGLE_SHEET_URL";
-    var sheet = SpreadsheetApp.openByUrl(spreadsheetUrl).getActiveSheet();
+    var spreadsheet = SpreadsheetApp.openById(spreadsheetUrl).getActiveSheet();
+    var sheet = spreadsheet.getSheetByName("sheetName"); // Replace "sheetName" with your sheet name
+
     var attribution_val = "Q29kZSB3cml0dGVuIGJ5IEJyeWFuIExpLg==";
     
     var report = AdsApp.report(
