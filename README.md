@@ -85,6 +85,10 @@ This method runs a Google Ads Script inside Google Ads Manager to fetch data and
 
 <p align="right"><a href="#top">back to top</a></p>
 
+
+## **LLM Insights (OpenAI/ChatGPT)**
+FOR LLM INSIGHTS INTEGRATION CLICK <a href="https://github.com/Zy8712/google-ad-manager-to-spreadsheet/blob/main/llm-insights-analysis/README.md">HERE</a>.
+
 ## **Contributing**
 Feel free to submit pull requests or report issues if you find any improvements.
 
